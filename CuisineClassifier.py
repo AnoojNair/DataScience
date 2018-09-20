@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
+# The training and tese dataset can be found here https://www.kaggle.com/c/whats-cooking-kernels-only/data
 df = pd.read_json('train.json', orient='columns')
 df['IngredientString'] = df['ingredients'].astype('str')
 df['IngredientString'] = df['IngredientString'].str.strip('[').str.strip(']').str.replace(',',' ').str.replace(' ','').str.replace('\'',' ')
